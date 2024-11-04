@@ -1,0 +1,18 @@
+name: nutrient-tracker
+channels:
+  - conda-forge
+  - pytorch
+  - nvidia
+dependencies:
+  - python==3.10
+  - pip
+  - numpy
+  - pandas
+  - matplotlib
+  - pytorch
+  - torchvision
+  - pytorch-cuda=11.8
+  - ultralytics
+  - tqdm
+  - wandb
+  - ipykernel
