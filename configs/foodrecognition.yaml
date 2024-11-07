@@ -1,0 +1,503 @@
+train: /home/archy1/troyd/NutritionTracker/data/processed_data/images/train
+val: /home/archy1/troyd/NutritionTracker/data/processed_data/images/val
+train_label: /home/archy1/troyd/NutritionTracker/data/processed_data/labels/train
+
+names:
+  0: Bread, wholemeal
+  1: Jam
+  2: Water
+  3: Bread, sourdough
+  4: Banana
+  5: Soft cheese
+  6: Ham, raw
+  7: Hard cheese
+  8: Cottage cheese
+  9: Bread, half white
+  10: Coffee, with caffeine
+  11: Fruit salad
+  12: Pancakes
+  13: Tea
+  14: Salmon, smoked
+  15: Avocado
+  16: Spring onion / scallion
+  17: Ristretto, with caffeine
+  18: Ham
+  19: Egg
+  20: Bacon, frying
+  21: Chips, french fries
+  22: Juice, apple
+  23: Chicken
+  24: Tomato, raw 
+  25: Broccoli
+  26: Shrimp, boiled
+  27: Beetroot, steamed, without addition of salt
+  28: Carrot, raw
+  29: Chickpeas
+  30: French salad dressing
+  31: Pasta, Hörnli
+  32: Sauce, cream
+  33: Meat balls
+  34: Pasta
+  35: Tomato sauce
+  36: Cheese
+  37: Pear
+  38: Cashew nut
+  39: Almonds
+  40: Lentils
+  41: Mixed vegetables
+  42: Peanut butter
+  43: Apple
+  44: Blueberries
+  45: Cucumber
+  46: Cocoa powder
+  47: Greek Yaourt, yahourt, yogourt ou yoghourt
+  48: Maple syrup (Concentrate)
+  49: Buckwheat, grain peeled
+  50: Butter
+  51: Herbal tea
+  52: Mayonnaise
+  53: Soup, vegetable
+  54: Wine, red
+  55: Wine, white
+  56: Green bean, steamed, without addition of salt
+  57: Sausage
+  58: Pizza, Margherita, baked
+  59: Salami
+  60: Mushroom
+  61: (bread, meat substitute, lettuce, sauce)
+  62: Tart
+  63: Tea, verveine
+  64: Rice
+  65: White coffee, with caffeine
+  66: Linseeds
+  67: Sunflower seeds
+  68: Ham, cooked
+  69: Bell pepper, red, raw 
+  70: Zucchini
+  71: Green asparagus
+  72: Tartar sauce
+  73: Lye pretzel (soft)
+  74: Cucumber, pickled 
+  75: Curry, vegetarian
+  76: Yaourt, yahourt, yogourt ou yoghourt, natural
+  77: Soup of lentils, Dahl (Dhal)
+  78: Soup, cream of vegetables
+  79: Balsamic vinegar
+  80: Salmon
+  81: Salt cake (vegetables, filled)
+  82: Bacon
+  83: Orange
+  84: Pasta, noodles
+  85: Cream
+  86: Cake, chocolate
+  87: Pasta, spaghetti
+  88: Black olives
+  89: Parmesan
+  90: Spaetzle
+  91: Salad, lambs' ear
+  92: Salad, leaf / salad, green
+  93: Potatoes steamed
+  94: White cabbage
+  95: Halloumi
+  96: Beetroot, raw
+  97: Bread, grain
+  98: Applesauce, unsweetened, canned
+  99: Cheese for raclette
+  100: Mushrooms
+  101: Bread, white
+  102: Curds, natural, with at most 10% fidm
+  103: Bagel (without filling)
+  104: Quiche, with cheese, baked, with puff pastry
+  105: Soup, potato
+  106: Bouillon, vegetable
+  107: Beef, sirloin steak
+  108: Taboulé, prepared, with couscous
+  109: Eggplant
+  110: Bread
+  111: Turnover with meat (small meat pie, empanadas)
+  112: Mungbean sprouts
+  113: Mozzarella
+  114: Pasta, penne
+  115: Lasagne, vegetable, prepared
+  116: Mandarine
+  117: Kiwi
+  118: French beans
+  119: Tartar (meat)
+  120: Spring roll (fried)
+  121: Pork, chop
+  122: Caprese salad (Tomato Mozzarella)
+  123: Leaf spinach
+  124: Roll of half-white or white flour, with large void
+  125: Pasta, ravioli, stuffing
+  126: Omelette, plain
+  127: Tuna
+  128: Dark chocolate
+  129: Sauce (savoury)
+  130: Dried raisins
+  131: Ice tea
+  132: Kaki
+  133: Macaroon
+  134: Smoothie
+  135: Crêpe, plain
+  136: Chicken nuggets
+  137: Chili con carne, prepared
+  138: Veggie burger
+  139: Cream spinach
+  140: Cod
+  141: Chinese cabbage
+  142: Hamburger (Bread, meat, ketchup)
+  143: Soup, pumpkin
+  144: Sushi
+  145: Chestnuts
+  146: Coffee, decaffeinated
+  147: Sauce, soya
+  148: Balsamic salad dressing
+  149: Pasta, twist
+  150: Bolognaise sauce
+  151: Leek
+  152: Fajita (bread only)
+  153: Potato-gnocchi
+  154: Beef, cut into stripes (only meat)
+  155: Rice noodles/vermicelli
+  156: Tea, ginger
+  157: Tea, green
+  158: Bread, whole wheat
+  159: Onion
+  160: Garlic
+  161: Hummus
+  162: Pizza, with vegetables, baked
+  163: Beer
+  164: Glucose drink 50g
+  165: Chicken, wing
+  166: Ratatouille
+  167: Peanut
+  168: High protein pasta (made of lentils, peas, ...)
+  169: Cauliflower
+  170: Quiche, with spinach, baked, with cake dough
+  171: Green olives
+  172: Brazil nut
+  173: Eggplant caviar
+  174: Bread, pita
+  175: Pasta, wholemeal
+  176: Sauce, pesto
+  177: Oil
+  178: Couscous
+  179: Sauce, roast
+  180: Prosecco
+  181: Crackers
+  182: Bread, toast
+  183: Shrimp / prawn (small)
+  184: Panna cotta
+  185: Romanesco
+  186: Water with lemon juice
+  187: Espresso, with caffeine
+  188: Egg, scrambled, prepared
+  189: Juice, orange
+  190: Ice cubes
+  191: Braided white loaf
+  192: Emmental cheese
+  193: Croissant, wholegrain
+  194: Hazelnut-chocolate spread(Nutella, Ovomaltine, Caotina)
+  195: Tomme
+  196: Water, mineral
+  197: Hazelnut
+  198: Bacon, raw
+  199: Bread, nut
+  200: Black Forest Tart
+  201: Soup, Miso
+  202: Peach
+  203: Figs
+  204: Beef, filet
+  205: Mustard, Dijon
+  206: Rice, Basmati
+  207: Mashed potatoes, prepared, with full fat milk, with butter
+  208: Dumplings
+  209: Pumpkin
+  210: Swiss chard
+  211: Red cabbage
+  212: Spinach, raw
+  213: Naan (indien bread)
+  214: Chicken curry (cream/coconut milk. curry spices/paste))
+  215: Crunch Müesli
+  216: Biscuits
+  217: Bread, French (white flour)
+  218: Meatloaf
+  219: Fresh cheese
+  220: Honey
+  221: Vegetable mix, peas and carrots
+  222: Parsley
+  223: Brownie
+  224: Dairy ice cream
+  225: Tea, black
+  226: Carrot cake
+  227: Fish fingers (breaded)
+  228: Salad dressing
+  229: Dried meat
+  230: Chicken, breast
+  231: Mixed salad (chopped without sauce)
+  232: Feta
+  233: Praline
+  234: Tea, peppermint
+  235: Walnut
+  236: Potato salad, with mayonnaise yogurt dressing
+  237: Kebab in pita bread
+  238: Kolhrabi
+  239: Alfa sprouts
+  240: Brussel sprouts
+  241: Bacon, cooking
+  242: Gruyère
+  243: Bulgur
+  244: Grapes
+  245: Pork, escalope
+  246: Chocolate egg, small
+  247: Cappuccino
+  248: Zucchini, stewed, without addition of fat, without addition of salt
+  249: Crisp bread, Wasa
+  250: Bread, black
+  251: Perch fillets (lake)
+  252: Rosti
+  253: Mango
+  254: Sandwich (ham, cheese and butter)
+  255: Müesli
+  256: Spinach, steamed, without addition of salt
+  257: Fish
+  258: Risotto, without cheese, cooked
+  259: Milk Chocolate with hazelnuts
+  260: Cake (oblong)
+  261: Crisps
+  262: Pork
+  263: Pomegranate
+  264: Sweet corn, canned
+  265: Flakes, oat
+  266: Greek salad
+  267: Cantonese fried rice
+  268: Sesame seeds
+  269: Bouillon
+  270: Baked potato
+  271: Fennel
+  272: Meat
+  273: Bread, olive
+  274: Croutons
+  275: Philadelphia
+  276: Mushroom, (average), stewed, without addition of fat, without addition of salt
+  277: Bell pepper, red, stewed, without addition of fat, without addition of salt
+  278: White chocolate
+  279: Mixed nuts
+  280: Breadcrumbs (unspiced)
+  281: Fondue
+  282: Sauce, mushroom
+  283: Tea, spice
+  284: Strawberries
+  285: Tea, rooibos
+  286: Pie, plum, baked, with cake dough
+  287: Potatoes au gratin, dauphinois, prepared
+  288: Capers
+  289: Vegetables
+  290: Bread, wholemeal toast
+  291: Red radish
+  292: Fruit tart
+  293: Beans, kidney
+  294: Sauerkraut
+  295: Mustard
+  296: Country fries
+  297: Ketchup
+  298: Pasta, linguini, parpadelle, Tagliatelle
+  299: Chicken, cut into stripes (only meat)
+  300: Cookies
+  301: Sun-dried tomatoe
+  302: Bread, Ticino
+  303: Semi-hard cheese
+  304: Margarine
+  305: Porridge, prepared, with partially skimmed milk
+  306: Soya drink (soy milk)
+  307: Juice, multifruit
+  308: Popcorn salted
+  309: Chocolate, filled
+  310: Milk chocolate
+  311: Bread, fruit
+  312: Mix of dried fruits and nuts
+  313: Corn
+  314: Tête de Moine
+  315: Dates
+  316: Pistachio
+  317: Celery
+  318: White radish
+  319: Oat milk
+  320: Cream cheese
+  321: Bread, rye
+  322: Witloof chicory
+  323: Apple crumble
+  324: Goat cheese (soft)
+  325: Grapefruit, pomelo
+  326: Risotto, with mushrooms, cooked
+  327: Blue mould cheese
+  328: Biscuit with Butter
+  329: Guacamole
+  330: Pecan nut
+  331: Tofu
+  332: Cordon bleu, from pork schnitzel, fried
+  333: Paprika chips
+  334: Quinoa
+  335: Kefir drink
+  336: M&M's
+  337: Salad, rocket
+  338: Bread, spelt
+  339: Pizza, with ham, with mushrooms, baked
+  340: Fruit coulis
+  341: Plums
+  342: Beef, minced (only meat)
+  343: Pizza, with ham, baked
+  344: Pineapple
+  345: Soup, tomato
+  346: Cheddar
+  347: Tea, fruit
+  348: Rice, Jasmin
+  349: Seeds
+  350: Focaccia
+  351: Milk
+  352: Coleslaw (chopped without sauce)
+  353: Pastry, flaky
+  354: Curd
+  355: Savoury puff pastry stick
+  356: Sweet potato
+  357: Chicken, leg
+  358: Croissant
+  359: Sour cream
+  360: Ham, turkey
+  361: Processed cheese
+  362: Fruit compotes
+  363: Cheesecake
+  364: Pasta, tortelloni, stuffing
+  365: Sauce, cocktail
+  366: Croissant with chocolate filling
+  367: Pumpkin seeds
+  368: Artichoke
+  369: Champagne
+  370: Grissini
+  371: Sweets / candies
+  372: Brie
+  373: Wienerli (Swiss sausage)
+  374: Syrup (diluted, ready to drink)
+  375: Apple pie
+  376: White bread with butter, eggs and milk
+  377: Savoury puff pastry
+  378: Anchovies
+  379: Tuna, in oil, drained
+  380: Lemon pie
+  381: Meat terrine, paté
+  382: Coriander
+  383: Falafel (balls)
+  384: Berries
+  385: Latte macchiato, with caffeine
+  386: Faux-mage Cashew, vegan chers
+  387: Beans, white
+  388: Sugar Melon
+  389: Mixed seeds
+  390: Hamburger
+  391: Hamburger bun
+  392: Oil & vinegar salad dressing
+  393: Soya Yaourt, yahourt, yogourt ou yoghourt
+  394: Chocolate milk, chocolate drink
+  395: Celeriac
+  396: Chocolate mousse
+  397: Cenovis, yeast spread
+  398: Thickened cream (> 35%)
+  399: Meringue
+  400: Lamb, chop
+  401: Shrimp / prawn (large)
+  402: Beef
+  403: Lemon
+  404: Croque monsieur
+  405: Chives
+  406: Chocolate cookies
+  407: Birchermüesli, prepared, no sugar added
+  408: Fish crunchies (battered)
+  409: Muffin
+  410: Savoy cabbage, steamed, without addition of salt
+  411: Pine nuts
+  412: Chorizo
+  413: Chia grains
+  414: Frying sausage
+  415: French pizza from Alsace, baked
+  416: Chocolate
+  417: Cooked sausage
+  418: Grits, polenta, maize flour
+  419: Gummi bears, fruit jellies, Jelly babies with fruit essence
+  420: Wine, rosé
+  421: Coca Cola
+  422: Raspberries
+  423: Roll with pieces of chocolate
+  424: Goat, (average), raw
+  425: Lemon Cake
+  426: Coconut milk
+  427: Rice, wild
+  428: Gluten-free bread
+  429: Pearl onions
+  430: Buckwheat pancake
+  431: Bread, 5-grain
+  432: Light beer
+  433: Sugar, glazing
+  434: Tzatziki
+  435: Butter, herb
+  436: Ham croissant
+  437: Corn crisps
+  438: Lentils green (du Puy, du Berry)
+  439: Cocktail
+  440: Rice, whole-grain
+  441: Veal sausage
+  442: Cervelat
+  443: Sorbet
+  444: Aperitif, with alcohol, apérol, Spritz
+  445: Dips
+  446: Corn Flakes
+  447: Peas
+  448: Tiramisu
+  449: Apricots
+  450: Cake, marble
+  451: Lamb
+  452: Lasagne, meat, prepared
+  453: Coca Cola Zero
+  454: Cake, salted
+  455: Dough (puff pastry, shortcrust, bread, pizza dough)
+  456: Rice waffels
+  457: Sekt
+  458: Brioche
+  459: Vegetable au gratin, baked
+  460: Mango dried
+  461: Processed meat, Charcuterie
+  462: Mousse
+  463: Sauce, sweet & sour
+  464: Basil
+  465: Butter, spread, puree almond
+  466: Pie, apricot, baked, with cake dough
+  467: Rusk, wholemeal
+  468: Beef, roast
+  469: Vanille cream, cooked, Custard, Crème dessert
+  470: Pasta in conch form
+  471: Nuts
+  472: Sauce, carbonara
+  473: Fig, dried
+  474: Pasta in butterfly form, farfalle
+  475: Minced meat
+  476: Carrot, steamed, without addition of salt
+  477: Ebly
+  478: Damson plum
+  479: Shoots
+  480: Bouquet garni
+  481: Coconut
+  482: Banana cake
+  483: Waffle
+  484: Apricot, dried
+  485: Sauce, curry
+  486: Watermelon, fresh
+  487: Sauce, sweet-salted (asian)
+  488: Pork, roast
+  489: Blackberry
+  490: Smoked cooked sausage of pork and beef meat sausag
+  491: bean seeds
+  492: Italian salad dressing
+  493: White asparagus
+  494: Pie, rhubarb, baked, with cake dough
+  495: Tomato, stewed, without addition of fat, without addition of salt
+  496: Cherries
+  497: Nectarine
