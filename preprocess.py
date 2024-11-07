@@ -6,7 +6,7 @@ from tqdm import tqdm
 
 TRAIN_ROOT = "data/raw_data/public_training_set_release_2.0"
 VAL_ROOT = "data/raw_data/public_validation_set_2.0"
-OUTPUT_ROOT = "data/processed_data"
+OUTPUT_ROOT = "/home/archy1/troyd/NutritionTracker/data/processed_data"
 
 with open(os.path.join(TRAIN_ROOT, "annotations.json"), 'r') as f:
     data = json.load(f)
@@ -22,7 +22,6 @@ def process_annotations(input_path: str, output_path: str) -> None:
     with open(input_path, 'r') as f:
         data = json.load(f)
     
-    # F
     for image in tqdm(data['images'], desc=f"Processing {input_path}", unit="image"):
         image_id = image['id']
         width, height = image["width"], image['height']
@@ -33,7 +32,8 @@ def process_annotations(input_path: str, output_path: str) -> None:
             
             for annotation in annotations:
                 class_id = category_id_to_class_id[annotation['category_id']]
-                x, y, w, h = annotation['bbox']
+
+                y, x, h, w = annotation["bbox"] # TODO: This is the weirdest format I've ever seen, is it right?
 
                 # Convert to x_c, y_c, w, h
                 x_center = (x + w / 2) / width
@@ -41,7 +41,7 @@ def process_annotations(input_path: str, output_path: str) -> None:
                 w = w / width
                 h = h / height
                 
-                f.write(f"{class_id} {x_center} {y_center} {width} {height}\n")
+                f.write(f"{class_id} {x_center} {y_center} {w} {h}\n")
 
 process_annotations(os.path.join(TRAIN_ROOT, "annotations.json"), os.path.join(OUTPUT_ROOT, "labels/train"))
 process_annotations(os.path.join(VAL_ROOT, "annotations.json"), os.path.join(OUTPUT_ROOT, "labels/val"))
@@ -64,12 +64,16 @@ def process_images(input_path: str, output_path: str):
 process_images(os.path.join(TRAIN_ROOT, "images"), os.path.join(OUTPUT_ROOT, "images/train"))
 process_images(os.path.join(VAL_ROOT, "images"), os.path.join(OUTPUT_ROOT, "images/val"))
 
+print("Writing configuration file to configs/foodbenchmark.yaml")
+
+os.makedirs("configs", exist_ok=True)
+
 with open("configs/foodbenchmark.yaml", 'w') as f:
-    f.write(f"""train: {OUTPUT_ROOT}/images/train
-val: {OUTPUT_ROOT}/images/val
-names: {OUTPUT_ROOT}/labels/classes.txt
-""")
-    
-with open(os.path.join(OUTPUT_ROOT, "labels/classes.txt"), 'w') as f:
-    for class_id, class_name in class_id_to_name.items():
-        f.write(f"{class_name}\n")
+    f.write(f"train: {OUTPUT_ROOT}/images/train\n")
+    f.write(f"val: {OUTPUT_ROOT}/images/val\n")
+    f.write(f"train_label: {OUTPUT_ROOT}/labels/train\n\n")
+
+    f.write("names:\n")
+
+    for id, name in class_id_to_name.items():
+        f.write(f"  {id}: {name}\n")
