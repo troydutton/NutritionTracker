@@ -1,4 +1,4 @@
-name: nutrient-tracker
+name: nutrition-tracker
 channels:
   - conda-forge
   - pytorch
@@ -11,8 +11,17 @@ dependencies:
   - matplotlib
   - pytorch
   - torchvision
+  - pytorch
   - pytorch-cuda=11.8
+  - bitsandbytes
+  - sentencepiece
+  - transformers
+  - protobuf
   - ultralytics
+  - scikit-learn
   - tqdm
   - wandb
   - ipykernel
+  - pip:
+    - accelerate
+    - flash-attn

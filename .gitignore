@@ -1,5 +1,7 @@
 data
 runs
 wandb
-*.pt
 NutritionTracker
+bitsandbytes
+
+*.pt
