@@ -5,3 +5,4 @@ NutritionTracker
 bitsandbytes
 
 *.pt
+*.pyc
