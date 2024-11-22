@@ -16,7 +16,6 @@ def load_language_model(model_name: str = "meta-llama/Llama-2-7b-chat-hf") -> tu
         model_name,
         low_cpu_mem_usage=True,
         quantization_config=config,
-        attn_implementation="flash_attention_2",
     )
     tokenizer = AutoTokenizer.from_pretrained(model_name)
 

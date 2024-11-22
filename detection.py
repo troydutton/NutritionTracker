@@ -2,16 +2,16 @@ import torch
 from PIL import Image
 from ultralytics import YOLO
 
-
-def get_food_items(model: YOLO, image: str) -> str:
+def detect_food(model: YOLO, image: str) -> str:
     # Load the image
     img = Image.open(image)
 
     # Perform object detection
-    results = model(img)
+    result = model(img)[0]
 
-    # Extract the food items
-    food_items = results.names
+    class_names = [result.names[id] for id in result.boxes.cls.tolist()]
+
+    food_items = ", ".join(class_names)
 
     return food_items
 

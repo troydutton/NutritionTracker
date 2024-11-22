@@ -1,21 +1,18 @@
 from ultralytics import YOLO
 
-from detection import get_food_items
+from detection import detect_food
 from llm import generate_response, load_language_model
 
 
 def main():
     # Load the model
-    detection_model = YOLO("pretrained-weights")
+    detection_model = YOLO("weights/yolov8m.pt")
 
     language_model, tokenizer = load_language_model("meta-llama/Llama-2-7b-chat-hf")
 
-    food_items = get_food_items(detection_model, "image.jpg") 
+    food_items = detect_food(detection_model, "hotdog.jpg")
 
-    # TODO: Convert food_items into a prompt
-    prompt = "Caesar Salad, Grilled Chicken, Hot Dog, Candy."
-
-    response = generate_response(language_model, tokenizer, prompt)
+    response = generate_response(language_model, tokenizer, food_items)
 
     print(response)
 
