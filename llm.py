@@ -30,7 +30,7 @@ def generate_response(model: AutoModelForCausalLM, tokenizer: AutoTokenizer, pro
     # Create a chat history
     chat = [
         {"role": "system", 
-         "content": "You are a nutrition tracker assistant. You are helping a user track their daily food intake. Based on the food items the user has consumed, you are providing a summary of their nutrition intake."},
+         "content": "You are a nutrition tracker assistant. You are helping a user track their daily food intake. Based on the food items the user has consumed, you are providing a summary of their nutrition intake. Provide only the final summary and perecentage of daily nutritional intake. Do not give individual breakdowns of the food items."},
         {"role": "user", "content": prompt},
     ]
 
