@@ -22,6 +22,4 @@ dependencies:
   - tqdm
   - wandb
   - ipykernel
-  - pip:
-    - accelerate
-    - flash-attn
+  - accelerate>=0.26.0
