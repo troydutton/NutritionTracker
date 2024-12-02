@@ -35,13 +35,6 @@ Abinav Krishnan <br />
 Haoji Liu <br />
 Shashank Nag <br />
 
-### Contact Information:
-Pedro Andres Alba Diaz: pedro.andres.alba@utexas.edu <br />
-Troy Dutton: <br />
-Abinav Krishnan: <br />
-Haoji Liu: <br />
-Shashank Nag: <br />
-
 ### Course:
 ECE 3981K 3-Applied Machine Learning
 
