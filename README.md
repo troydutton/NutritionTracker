@@ -42,7 +42,11 @@ ECE 3981K 3-Applied Machine Learning
 Fall 2024
 
 ### Data:
-Data is publically available from: 
+Data is publically available from: https://drive.google.com/drive/folders/14rJclN97hZqe6bmGkTjnvPaDBBIF4v5w
+
+### Aid models:
+ YOLOv8 model: https://github.com/ultralytics/ultralytics <br />
+ Meta-llama/Llama-2-7b: https://huggingface.co/meta-llama/Llama-2-7b
 
 ### Website:
 There is no website for this project. All information can be found in this repository.
